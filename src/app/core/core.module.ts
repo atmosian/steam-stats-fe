@@ -13,9 +13,8 @@ import { rootReducers } from './store/root.reducers';
   imports: [
     StoreModule.forRoot(rootReducers),
     EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ]
 })
-export class CoreModule {
-}
+export class CoreModule {}
